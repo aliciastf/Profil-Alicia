@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="fotoprofil.jpg" alt="Profile Picture" class="profile-picture">
+        <h1 style="margin-left: 20px;">Profil Alicia</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+            <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+            <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+            <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+            <li><a href="#" onclick="showContent('publikasi')">Publikasi</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <article id="biodata" class="content-section">
+            <h2>Biodata</h2>
+            <p>NIM: 2023081015</p>
+            <p>Nama: Alicia Stifa Nur Sahra</p>
+            <p>Agama: Islam</p>
+            <p>Tanggal Lahir: 12 Januari 2005</p>
+            <p>Tempat Lahir: Jakarta</p>
+        </article>
+        <article id="pendidikan" class="content-section" style="display: none;">
+            <h2>Pendidikan</h2>
+            <p>SMP : MTsN 3 Jakarta Selatan</p>
+            <p>SMA : SMAN 4 Tangerang Selatan</p>
+            <p>Perguruan Tinggi : Universitas Pembangunan Jaya</p>
+        </article>
+        <article id="pengalaman" class="content-section" style="display: none;">
+            <h2>Pengalaman</h2>
+            <p>Panitia Gidhub 2024</p>
+            <p>Panitia Career&Internship Fair UPJ 2024</p>
+            <p>Anggota HIMASIF 2024</p>
+        </article>
+        <article id="keahlian" class="content-section" style="display: none;">
+            <h2>Keahlian</h2>
+            <p>Programming</p>
+            <p>Figma</p>
+            <p>Excel</p>
+        </article>
+        <article id="publikasi" class="content-section" style="display: none;">
+            <h2>Publikasi</h2>
+            <p>Pengaruh Virtual Reality terhadap Pengalaman Pembelajaran Interaktif</p>
+        </article>
+    </section>
+
+    <aside>
+        <h2>Hobi</h2>
+        <ul>
+            <li>Jogging</li>
+            <li>Coding</li>
+        </ul>
+    </aside>
+
+
+    <footer>
+        <p>Instagram : @aliciastifa</p>
+        <i>&copy; 2024. All Rights Reserved</i>
+        <k>Alicia's Web<br/>
+         Profiles of Progress</k>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            // Hide all content sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(article) {
+                article.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #474F7A ;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 25% 50% 25%;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    grid-column: 1 / 4;
+    background-color: #17153B;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.profile-picture {
+    width: 70px;
+    height: 75px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    overflow: hidden; 
+  
+  }
+  
+
+/* Nav */
+nav {
+    background-color: #b398c1;
+    padding: 10px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+
+    
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; 
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FAF0E6;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #37274a;
+}
+
+/* Section */
+section {
+    padding: 20px;
+    background-color: #FAF0E6;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+section h2 {
+    color: #81689D;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3C0753;
+    padding-bottom: 5px;
+}
+
+section p {
+    line-height: 2;
+}
+
+/* Aside */
+aside {
+    padding: 15px;
+    background-color: #FAF0E6;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+aside h2 {
+    color: #81689D;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / 4;
+    background-color: #17153B;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+footer p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+footer i {
+    text-align: center;
+    flex: 1;
+}
+
+footer k {
+    text-align: right;
+    flex: 1;
+}
+
+/* Desktop Layout */
+@media (min-width: 1025px) {
+    body {
+        grid-template-columns: 25% 50% 25%;
+    }
+    aside h2::after {
+        content: " : "; 
+    }
+}
+
+/* Tablet Landscape Layout */
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: 25% 75%;
+    }
+
+    section {
+        grid-column: 75%;
+    }
+
+    aside {
+        grid-column: 1 / 3;
+    }
+    aside h2::after {
+        content: " : "; 
+    }
+}
+
+/* Tablet Portrait Layout */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav, section, aside {
+        grid-column: 1 / 2;
+    }
+
+    section {
+        padding: 100px;
+    }
+
+    aside {
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    aside {
+        display: flex;
+        align-items: center;
+    }
+
+    aside h2 {
+        margin-right: 10px;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    aside h2::after {
+        content: " : "; 
+    }
+
+}
+/* Smartphone Layout*/
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        justify-content: flex-start; 
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+
+    aside {
+        display: block;
+        padding: 10px;
+    }
+
+    aside h2 {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    aside ul {
+        display: block; 
+        list-style: none;
+        padding-left: 0;
+        margin-top: 5px; 
+    }
+
+    aside ul li {
+        margin: 5px 0; 
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+}
